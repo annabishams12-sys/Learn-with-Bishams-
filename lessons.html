@@ -1,0 +1,83 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b66">
+  <title>Lessons and Notes | Learn with Bishams</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script defer src="lessons.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">LB</span>
+      <span>Learn with <b>Bishams</b></span>
+    </a>
+    <span class="tagline">Learn. Grow. Succeed.</span>
+  </header>
+
+  <main class="shell">
+    <div class="page-top">
+      <div>
+        <p class="eyebrow">STUDENT LEARNING SPACE</p>
+        <h1 style="margin:0;color:#123b66;font-size:clamp(27px,5vw,38px)">
+          Lessons and notes
+        </h1>
+      </div>
+      <a class="back-link" href="index.html">← Back to dashboard</a>
+    </div>
+
+    <section class="library-card">
+      <div class="library-status">
+        <span class="status-dot"></span>
+        Curriculum under review
+      </div>
+
+      <h2 style="color:#123b66;margin:14px 0 5px">
+        Primary 1 · First Term
+      </h2>
+
+      <p class="muted">
+        Choose a learning area to explore the 13-week curriculum.
+      </p>
+
+      <div class="library-tools">
+        <input
+          id="subject-search"
+          type="search"
+          placeholder="Search learning areas..."
+          aria-label="Search learning areas">
+      </div>
+
+      <div id="subject-grid" class="subject-grid">
+        <div class="empty-search">Loading learning areas...</div>
+      </div>
+
+      <section id="lesson-detail" class="lesson-detail hidden">
+        <h3 id="selected-subject">Choose a learning area</h3>
+        <p class="muted">Select a week below.</p>
+
+        <div id="week-grid" class="week-grid"></div>
+
+        <div id="week-status" class="pending-panel">
+          <strong>Lesson materials are being checked.</strong>
+          Approved lesson notes will appear here after review.
+        </div>
+      </section>
+
+      <p class="library-note">
+        Unfinished lesson notes and examination materials have not been published.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Learn with Bishams.
+    Learn anywhere, grow everywhere.
+  </footer>
+</body>
+</html>
