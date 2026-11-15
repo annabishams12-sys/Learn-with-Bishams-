@@ -1,4 +1,3 @@
-
 const subjects = [
   "English Language", "Mathematics", "Hausa Language",
   "Basic Science", "Physical and Health Education",
