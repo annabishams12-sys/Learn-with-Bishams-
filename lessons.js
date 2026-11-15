@@ -79,7 +79,7 @@ const lessons = {
           hausa: "Wace ce mafi ƙanƙantar lamba?",
           options: ["5", "1", "3"],
           answer: 1
-        
+        }
       ]
     },
 
