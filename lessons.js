@@ -20,18 +20,29 @@ const lessonDetail = document.getElementById("lesson-detail");
 const selectedSubject = document.getElementById("selected-subject");
 const weekGrid = document.getElementById("week-grid");
 const weekStatus = document.getElementById("week-status");
+
 const languageSelect = document.getElementById("lesson-language");
 const languageSwitch = document.getElementById("switch-language");
 const languageStatus = document.getElementById("language-status");
 
-let preferredLanguage =
-  localStorage.getItem("lessonLanguage") || "english";
+let preferredLanguage = "english";
+
+try {
+  preferredLanguage =
+    localStorage.getItem("lessonLanguage") || "english";
+} catch (error) {
+  preferredLanguage = "english";
+}
+
+if (!["english", "hausa"].includes(preferredLanguage)) {
+  preferredLanguage = "english";
+}
 
 let currentLanguage = preferredLanguage;
 
-languageSelect.value = preferredLanguage;
-
 function updateLanguageDisplay() {
+  if (!languageSelect || !languageSwitch || !languageStatus) return;
+
   languageStatus.textContent =
     currentLanguage === "english"
       ? "English selected"
@@ -43,22 +54,32 @@ function updateLanguageDisplay() {
       : "Canza zuwa Turanci";
 }
 
-languageSelect.addEventListener("change", () => {
-  preferredLanguage = languageSelect.value;
-  currentLanguage = preferredLanguage;
+if (languageSelect) {
+  languageSelect.value = preferredLanguage;
 
-  localStorage.setItem("lessonLanguage", preferredLanguage);
-  updateLanguageDisplay();
-});
+  languageSelect.addEventListener("change", function () {
+    preferredLanguage = languageSelect.value;
+    currentLanguage = preferredLanguage;
 
-languageSwitch.addEventListener("click", () => {
-  currentLanguage =
-    currentLanguage === "english" ? "hausa" : "english";
+    try {
+      localStorage.setItem("lessonLanguage", preferredLanguage);
+    } catch (error) {}
 
-  updateLanguageDisplay();
-});
+    updateLanguageDisplay();
+  });
+}
+
+if (languageSwitch) {
+  languageSwitch.addEventListener("click", function () {
+    currentLanguage =
+      currentLanguage === "english" ? "hausa" : "english";
+
+    updateLanguageDisplay();
+  });
+}
 
 updateLanguageDisplay();
+
 document.getElementById("year").textContent =
   new Date().getFullYear();
 
@@ -132,4 +153,3 @@ searchInput.addEventListener("input", event => {
 });
 
 showSubjects();
-    
