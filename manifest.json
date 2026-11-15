@@ -1,0 +1,10 @@
+{
+  "name": "Learn with Bishams",
+  "short_name": "Learn Bishams",
+  "description": "Learn anywhere. Practise anytime. Achieve more.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f8fc",
+  "theme_color": "#173d72",
+  "icons": []
+}
