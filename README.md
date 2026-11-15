@@ -1,42 +1,23 @@
-# Learn with Bishams — first working prototype
+# Learn with Bishams — Student Accounts update
 
-A free, responsive, installable-web-app starter for the Learn with Bishams education platform.
+This version adds student sign-up, login, logout and password-reset email using Supabase Auth.
 
-## What's included
-- Responsive student dashboard
-- Sample lesson library with five subjects
-- Practice quiz with automatic marking
-- Local progress tracking using browser storage
-- Teacher dashboard preview
-- Membership-plan preview
-- PWA manifest and basic offline cache
+## Before uploading
+1. Open `config.js`.
+2. Replace `PASTE_YOUR_SUPABASE_PROJECT_URL_HERE` with your base project URL, for example `https://YOURPROJECT.supabase.co` (do not add `/rest/v1/`).
+3. Replace `PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE` with the `sb_publishable_...` key from Supabase.
+4. Never use an `sb_secret_...` or `service_role` key in this website.
 
-## Run it on your computer
-1. Download and extract the ZIP file.
-2. Open the extracted `learn_with_bishams` folder.
-3. For the simplest preview, open `index.html` in a modern browser.
+## Upload to GitHub
+Upload and commit these files to the root of your existing repository, replacing the old `index.html`, `styles.css`, and `app.js`, and adding `config.js`. Keep the repository's existing manifest and service-worker files if you want.
 
-For install/offline features, serve the folder over HTTPS or localhost. One easy option is VS Code with the Live Server extension, or Python:
-```bash
-python -m http.server 8000
-```
-Then visit `http://localhost:8000`.
+## Supabase settings
+In Supabase Authentication settings:
+- Keep Email provider enabled.
+- If email confirmation is enabled, students must confirm their email before logging in.
+- Under Authentication URL Configuration, add your published GitHub Pages URL as a Site URL and as an allowed Redirect URL, e.g. `https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/`.
 
-## Important limitations
-This is a front-end prototype, not a production education platform. Data is stored only in the current browser/device. It has no real student accounts, teacher permissions, cloud database, video hosting, payment gateway, paid-content protection, or live subscriptions. The teacher and membership screens are previews only. Do not collect real student personal information or payment details in this version.
-
-## Recommended next development stage
-1. Create a Supabase project for authentication and database.
-2. Add role-based access for student, teacher and administrator.
-3. Move courses, lessons, questions, results and progress into the database.
-4. Add secure server-side subscription verification with a supported payment provider (for example, Paystack for eligible Nigerian businesses).
-5. Add hosted video delivery and access controls.
-6. Test privacy, security, accessibility and age-appropriate safeguards before public launch.
-
-## Suggested free starting tools
-- Visual Studio Code: edit the project
-- GitHub: source-code backup and version control
-- Vercel: deploy the front end (check current free-plan limits)
-- Supabase: backend starter (check current free-plan limits)
-
-Free tiers and payment-provider eligibility/fees can change. Verify current terms before launch.
+## Notes
+- Full name and phone number are stored as Supabase Auth user metadata.
+- Supabase manages passwords; this website does not store passwords itself.
+- This is an initial authentication version. It does not yet include a separate teacher role, paid subscriptions, protected course content, or cloud progress tracking.

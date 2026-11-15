@@ -1,119 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#173d72">
-  <meta name="description" content="Learn with Bishams — Learn anywhere. Practise anytime. Achieve more.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b66">
   <title>Learn with Bishams</title>
-  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script defer src="app.js"></script>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#" aria-label="Learn with Bishams home">
-      <span class="brand-icon">🎓</span><span>Learn with <b>Bishams</b></span>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
-    <nav id="nav">
-      <button class="nav-link active" data-view="home">Home</button>
-      <button class="nav-link" data-view="lessons">Lessons</button>
-      <button class="nav-link" data-view="quiz">Quizzes</button>
-      <button class="nav-link" data-view="progress">My progress</button>
-      <button class="nav-link" data-view="teacher">Teacher area</button>
-      <button class="nav-link nav-cta" data-view="plans">Membership</button>
-    </nav>
+    <a class="brand" href="#"><span class="brand-mark">LB</span><span>Learn with <b>Bishams</b></span></a>
+    <span class="tagline">Learn. Grow. Succeed.</span>
   </header>
 
-  <main class="container">
+  <main class="shell">
     <section class="hero">
-      <div>
-        <p class="eyebrow">LEARN • PRACTISE • GROW • SUCCEED</p>
-        <h1>Education without<br><span>boundaries.</span></h1>
-        <p class="hero-copy">Build knowledge, practise with confidence and track your learning journey — wherever you are.</p>
-        <div class="hero-actions">
-          <button class="button primary" data-go="lessons">Explore lessons</button>
-          <button class="button ghost" data-go="quiz">Try a quiz</button>
-        </div>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="art-circle">📚</div><div class="art-card card-one">✏️ Learn something new</div>
-        <div class="art-card card-two">⭐ Keep making progress</div>
-      </div>
+      <p class="eyebrow">WELCOME TO YOUR LEARNING SPACE</p>
+      <h1>Learning made easier, <span>one step at a time.</span></h1>
+      <p>Access lessons, practise with quizzes and keep track of your learning journey.</p>
     </section>
 
-    <section class="welcome-row">
-      <div><p class="eyebrow">YOUR LEARNING SPACE</p><h2 id="greeting">Welcome, Learner! 👋</h2><p class="muted">Choose a section and keep moving forward.</p></div>
-      <label class="level-picker">Learning level
-        <select id="levelSelect"><option>Primary</option><option selected>Secondary</option><option>University</option></select>
-      </label>
-    </section>
-
-    <section id="view-home" class="view active">
-      <div class="section-heading"><div><p class="eyebrow">GET STARTED</p><h2>Your learning dashboard</h2></div></div>
-      <div class="stat-grid">
-        <article class="stat-card"><span class="stat-icon blue">📘</span><span class="stat-label">Lessons completed</span><strong id="statLessons">0</strong></article>
-        <article class="stat-card"><span class="stat-icon green">🏆</span><span class="stat-label">Quizzes completed</span><strong id="statQuizzes">0</strong></article>
-        <article class="stat-card"><span class="stat-icon orange">📈</span><span class="stat-label">Best score</span><strong id="statBest">—</strong></article>
+    <section id="auth-area" class="auth-card">
+      <div class="tabs" role="tablist">
+        <button class="tab active" id="show-login" type="button">Log in</button>
+        <button class="tab" id="show-signup" type="button">Create account</button>
       </div>
-      <div class="section-heading"><div><p class="eyebrow">EXPLORE</p><h2>Learning areas</h2></div></div>
-      <div class="feature-grid">
-        <button class="feature-card" data-go="lessons"><span>📖</span><b>Lessons & notes</b><small>Clear learning materials</small></button>
-        <button class="feature-card" data-go="quiz"><span>📝</span><b>Quizzes & exams</b><small>Practise and get marked</small></button>
-        <button class="feature-card" data-go="progress"><span>📊</span><b>Progress reports</b><small>See how you are improving</small></button>
-        <button class="feature-card" data-go="plans"><span>🌟</span><b>Membership</b><small>Explore learning plans</small></button>
-      </div>
-      <div class="callout"><div><p class="eyebrow">RECOMMENDED FOR YOU</p><h3>Start with Digital Technology</h3><p class="muted">Explore a sample lesson and test what you have learned.</p></div><button class="button primary" data-go="lessons">Open lesson →</button></div>
-    </section>
 
-    <section id="view-lessons" class="view">
-      <div class="section-heading"><div><p class="eyebrow">LEARNING LIBRARY</p><h2>Lessons & notes</h2><p class="muted">Select a subject to explore its sample lesson.</p></div></div>
-      <div class="filters"><label>Learning level<select id="lessonLevel"><option>Primary</option><option selected>Secondary</option><option>University</option></select></label><label>Subject<select id="subjectSelect"><option>Digital Technology</option><option>Mathematics</option><option>English Language</option><option>Basic Science</option><option>Government</option></select></label></div>
-      <article class="lesson-panel">
-        <div class="lesson-label">SAMPLE LESSON · SECONDARY</div><h3 id="lessonTitle">Introduction to Digital Technology</h3>
-        <p id="lessonIntro">Digital technology uses electronic tools and systems to create, store, process and share information.</p>
-        <h4>Learning points</h4><ul id="lessonPoints"><li>Digital devices process information using electronic signals.</li><li>Examples include computers, smartphones and digital cameras.</li><li>Digital technology supports learning, communication and work.</li></ul>
-        <div class="lesson-footer"><span class="pill">Beginner friendly</span><button class="button primary" id="completeLesson">Mark lesson as completed</button></div>
-        <p class="feedback" id="lessonFeedback" role="status"></p>
-      </article>
-      <div class="notice">This first version contains sample learning content. Your own full course library can be added through the next development stage.</div>
-    </section>
-
-    <section id="view-quiz" class="view">
-      <div class="section-heading"><div><p class="eyebrow">TEST YOUR KNOWLEDGE</p><h2>Practice quiz</h2><p class="muted">Answer all questions and submit to see your score.</p></div><span class="pill">3 questions</span></div>
-      <form id="quizForm" class="quiz-panel">
-        <fieldset><legend>1. What is a computer?</legend><label class="answer"><input type="radio" name="q1" value="a"> An electronic device that processes data</label><label class="answer"><input type="radio" name="q1" value="b"> A type of food</label><label class="answer"><input type="radio" name="q1" value="c"> A vehicle</label></fieldset>
-        <fieldset><legend>2. Which of these is an input device?</legend><label class="answer"><input type="radio" name="q2" value="a"> Monitor</label><label class="answer"><input type="radio" name="q2" value="b"> Keyboard</label><label class="answer"><input type="radio" name="q2" value="c"> Speaker</label></fieldset>
-        <fieldset><legend>3. What does CPU stand for?</legend><label class="answer"><input type="radio" name="q3" value="a"> Central Processing Unit</label><label class="answer"><input type="radio" name="q3" value="b"> Computer Personal Unit</label><label class="answer"><input type="radio" name="q3" value="c"> Control Program Utility</label></fieldset>
-        <button class="button primary" type="submit">Submit answers</button>
+      <form id="login-form" class="form">
+        <h2>Welcome back</h2>
+        <label>Email address<input id="login-email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+        <label>Password<input id="login-password" type="password" autocomplete="current-password" required placeholder="Enter your password"></label>
+        <button class="primary" type="submit">Log in</button>
+        <button class="text-button" id="forgot-password" type="button">Forgot password?</button>
       </form>
-      <div id="quizResult" class="result-panel" hidden aria-live="polite"></div>
+
+      <form id="signup-form" class="form hidden">
+        <h2>Create your student account</h2>
+        <label>Full name<input id="full-name" type="text" autocomplete="name" required placeholder="Enter your full name"></label>
+        <label>Email address<input id="signup-email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+        <label>Phone number<input id="phone" type="tel" autocomplete="tel" required placeholder="e.g. 08012345678"></label>
+        <label>Password<input id="signup-password" type="password" autocomplete="new-password" minlength="8" required placeholder="At least 8 characters"></label>
+        <button class="primary" type="submit">Create account</button>
+        <p class="hint">Use an email address you can access. You may need to confirm it before logging in.</p>
+      </form>
+      <p id="auth-message" class="message" aria-live="polite"></p>
     </section>
 
-    <section id="view-progress" class="view">
-      <div class="section-heading"><div><p class="eyebrow">YOUR ACHIEVEMENTS</p><h2>My progress</h2><p class="muted">Your activity on this device is shown below.</p></div></div>
-      <div class="progress-panel"><div class="progress-top"><div><span class="muted">Lessons completed</span><h3 id="progressLessons">0</h3></div><div><span class="muted">Quizzes completed</span><h3 id="progressQuizzes">0</h3></div><div><span class="muted">Best quiz score</span><h3 id="progressBest">—</h3></div></div><div class="progress-track"><div id="progressBar"></div></div><p class="muted" id="progressText">Complete a lesson or quiz to begin tracking your progress.</p></div>
-      <h3 class="subheading">Recent activity</h3><div id="activityList" class="activity-list"><p class="muted">No activity yet. Complete a lesson or quiz to see it here.</p></div>
-    </section>
-
-    <section id="view-teacher" class="view">
-      <div class="section-heading"><div><p class="eyebrow">FOR EDUCATORS</p><h2>Teacher dashboard</h2><p class="muted">A preview of tools for managing learning content.</p></div><span class="pill">Demo area</span></div>
-      <div class="teacher-grid"><article class="teacher-card"><span>📚</span><h3>Manage lessons</h3><p class="muted">Prepare notes and organise courses by level and subject.</p></article><article class="teacher-card"><span>🧠</span><h3>Create assessments</h3><p class="muted">Build quizzes, examinations and practice questions.</p></article><article class="teacher-card"><span>👩‍🎓</span><h3>Monitor learners</h3><p class="muted">Review learner participation and performance reports.</p></article></div>
-      <div class="notice warning">Teacher accounts, secure sign-in, content uploads and student management are not connected yet. They require a secure backend before real use.</div>
-    </section>
-
-    <section id="view-plans" class="view">
-      <div class="section-heading"><div><p class="eyebrow">LEARN MORE, GO FURTHER</p><h2>Membership plans</h2><p class="muted">Illustrative plans — prices and payment processing are not active yet.</p></div></div>
-      <div class="plans-grid">
-        <article class="plan-card"><span class="pill">Try us</span><h3>Free Preview</h3><div class="price">$0 <small>/ forever</small></div><ul><li>Sample lessons</li><li>Selected practice questions</li><li>Basic learning preview</li></ul><button class="button secondary" disabled>Included preview</button></article>
-        <article class="plan-card featured"><span class="pill light-pill">Popular</span><h3>Monthly</h3><div class="price">Coming soon</div><ul><li>Access to subscribed courses</li><li>Quizzes and assessments</li><li>Learning progress reports</li></ul><button class="button primary" disabled>Payments coming soon</button></article>
-        <article class="plan-card"><span class="pill">Save more</span><h3>Annual</h3><div class="price">Coming soon</div><ul><li>Annual learning access</li><li>Eligible video lessons</li><li>Progress tracking</li></ul><button class="button secondary" disabled>Payments coming soon</button></article>
+    <section id="student-area" class="student-card hidden">
+      <div class="welcome-row">
+        <div><p class="eyebrow">STUDENT DASHBOARD</p><h2 id="welcome-name">Welcome!</h2><p id="student-email" class="muted"></p></div>
+        <button id="logout-button" class="secondary" type="button">Log out</button>
       </div>
-      <p class="notice">No payment details are collected in this prototype. Real subscriptions will be added after business, gateway and security setup.</p>
+      <div class="dashboard-grid">
+        <article class="feature"><div class="feature-icon">📚</div><h3>Lessons and notes</h3><p>Explore learning materials for your studies.</p></article>
+        <article class="feature"><div class="feature-icon">✍️</div><h3>Practice quizzes</h3><p>Test what you have learned and improve.</p></article>
+        <article class="feature"><div class="feature-icon">📈</div><h3>Your progress</h3><p>Your learning journey starts here.</p></article>
+      </div>
+      <p class="hint">This is the first student-account version. Lessons, quizzes, and cloud progress will be added in later updates.</p>
+    </section>
+
+    <section class="trust-note">
+      <b>Your account is protected.</b> Passwords are managed by Supabase authentication and are not stored in this website's files.
     </section>
   </main>
 
-  <footer><b>Learn with Bishams</b><span>Learn anywhere. Practise anytime. Achieve more.</span><small>© <span id="year"></span> Learn with Bishams · Learning prototype</small></footer>
-  <script src="app.js"></script>
+  <footer>© <span id="year"></span> Learn with Bishams. Learn anywhere, grow everywhere.</footer>
 </body>
 </html>

@@ -1,128 +1,120 @@
-const STORAGE_KEY = "lwb_progress_v1";
-const defaultState = { lessons: [], quizzes: [], activities: [] };
-let state;
-try { state = { ...defaultState, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") }; }
-catch { state = { ...defaultState }; }
+(() => {
+  const config = window.LEARN_BISHAMS_CONFIG || {};
+  const message = document.getElementById("auth-message");
+  const authArea = document.getElementById("auth-area");
+  const studentArea = document.getElementById("student-area");
+  const loginForm = document.getElementById("login-form");
+  const signupForm = document.getElementById("signup-form");
+  const loginTab = document.getElementById("show-login");
+  const signupTab = document.getElementById("show-signup");
 
-const subjects = {
-  "Digital Technology": {
-    title: "Introduction to Digital Technology",
-    intro: "Digital technology uses electronic tools and systems to create, store, process and share information.",
-    points: ["Digital devices process information using electronic signals.", "Examples include computers, smartphones and digital cameras.", "Digital technology supports learning, communication and work."]
-  },
-  "Mathematics": {
-    title: "Introduction to Mathematics",
-    intro: "Mathematics is the study of numbers, quantities, shapes and patterns.",
-    points: ["Numbers are used for counting and measuring.", "Addition combines quantities.", "Subtraction finds the difference between quantities."]
-  },
-  "English Language": {
-    title: "Introduction to English Language",
-    intro: "English is a language used for speaking, reading, writing and communication.",
-    points: ["A sentence expresses a complete thought.", "A noun names a person, place, animal or thing.", "Punctuation helps make writing clear."]
-  },
-  "Basic Science": {
-    title: "Introduction to Basic Science",
-    intro: "Basic Science helps us understand the natural world through observation and investigation.",
-    points: ["Living things need suitable conditions to survive.", "Matter exists as solid, liquid or gas.", "Observation helps us learn about our environment."]
-  },
-  "Government": {
-    title: "Introduction to Government",
-    intro: "Government is the system or group of people responsible for making and enforcing rules in a society.",
-    points: ["Government maintains law and order.", "Citizens have rights and responsibilities.", "The three arms of government are the legislature, executive and judiciary."]
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function showMessage(text, isError = false) {
+    message.textContent = text;
+    message.className = "message " + (isError ? "error" : "success");
   }
-};
 
-function save() { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); renderStats(); }
-function addActivity(message) {
-  state.activities.unshift({ message, date: new Date().toLocaleString() });
-  state.activities = state.activities.slice(0, 12);
-  save();
-}
-function showView(name) {
-  document.querySelectorAll(".view").forEach(v => v.classList.toggle("active", v.id === `view-${name}`));
-  document.querySelectorAll(".nav-link").forEach(b => b.classList.toggle("active", b.dataset.view === name));
-  document.getElementById("nav").classList.remove("open");
-  if (name === "progress") renderProgress();
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-document.querySelectorAll("[data-view]").forEach(b => b.addEventListener("click", () => showView(b.dataset.view)));
-document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => showView(b.dataset.go)));
-document.getElementById("menuToggle").addEventListener("click", () => document.getElementById("nav").classList.toggle("open"));
+  function setTab(which) {
+    const login = which === "login";
+    loginForm.classList.toggle("hidden", !login);
+    signupForm.classList.toggle("hidden", login);
+    loginTab.classList.toggle("active", login);
+    signupTab.classList.toggle("active", !login);
+    showMessage("");
+  }
+  loginTab.addEventListener("click", () => setTab("login"));
+  signupTab.addEventListener("click", () => setTab("signup"));
 
-function renderLesson() {
-  const subject = document.getElementById("subjectSelect").value;
-  const data = subjects[subject];
-  document.getElementById("lessonTitle").textContent = data.title;
-  document.getElementById("lessonIntro").textContent = data.intro;
-  const ul = document.getElementById("lessonPoints");
-  ul.innerHTML = "";
-  data.points.forEach(point => { const li = document.createElement("li"); li.textContent = point; ul.appendChild(li); });
-  document.getElementById("lessonFeedback").textContent = "";
-}
-document.getElementById("subjectSelect").addEventListener("change", renderLesson);
-document.getElementById("lessonLevel").addEventListener("change", () => {
-  document.querySelector(".lesson-label").textContent = `SAMPLE LESSON · ${document.getElementById("lessonLevel").value.toUpperCase()}`;
-});
-document.getElementById("completeLesson").addEventListener("click", () => {
-  const subject = document.getElementById("subjectSelect").value;
-  if (!state.lessons.includes(subject)) state.lessons.push(subject);
-  addActivity(`Completed sample lesson: ${subject}`);
-  document.getElementById("lessonFeedback").textContent = "Lesson marked as completed. Well done!";
-});
+  const configured = config.SUPABASE_URL &&
+    config.SUPABASE_PUBLISHABLE_KEY &&
+    !config.SUPABASE_URL.includes("PASTE_") &&
+    !config.SUPABASE_PUBLISHABLE_KEY.includes("PASTE_");
 
-document.getElementById("quizForm").addEventListener("submit", event => {
-  event.preventDefault();
-  const form = new FormData(event.target);
-  const keys = ["q1", "q2", "q3"];
-  const unanswered = keys.filter(k => !form.get(k));
-  const result = document.getElementById("quizResult");
-  if (unanswered.length) {
-    result.hidden = false;
-    result.innerHTML = `<b>Please answer all ${keys.length} questions.</b> You still have ${unanswered.length} unanswered.`;
+  if (!configured || !window.supabase) {
+    showMessage("Setup needed: add your Supabase Project URL and publishable key in config.js, then refresh this page.", true);
     return;
   }
-  const correct = ["a", "b", "a"];
-  const score = keys.reduce((total, key, i) => total + (form.get(key) === correct[i] ? 1 : 0), 0);
-  const percent = Math.round(score / keys.length * 100);
-  state.quizzes.push({ score, total: keys.length, percent, date: new Date().toLocaleString() });
-  addActivity(`Completed Digital Technology practice quiz: ${score}/${keys.length} (${percent}%)`);
-  result.hidden = false;
-  result.innerHTML = `<h3>Your score: ${score}/${keys.length} (${percent}%)</h3><p>${percent >= 70 ? "Great work! Keep it up." : "Good attempt. Review the lesson and try again."}</p>`;
-  result.scrollIntoView({ behavior: "smooth", block: "nearest" });
-});
 
-function renderStats() {
-  const best = state.quizzes.length ? Math.max(...state.quizzes.map(q => q.percent)) + "%" : "—";
-  document.getElementById("statLessons").textContent = state.lessons.length;
-  document.getElementById("statQuizzes").textContent = state.quizzes.length;
-  document.getElementById("statBest").textContent = best;
-  document.getElementById("progressLessons").textContent = state.lessons.length;
-  document.getElementById("progressQuizzes").textContent = state.quizzes.length;
-  document.getElementById("progressBest").textContent = best;
-}
-function renderProgress() {
-  renderStats();
-  const completed = state.lessons.length + state.quizzes.length;
-  const percent = Math.min(100, completed * 10);
-  document.getElementById("progressBar").style.width = percent + "%";
-  document.getElementById("progressText").textContent = completed ? `${completed} learning activities completed on this device.` : "Complete a lesson or quiz to begin tracking your progress.";
-  const list = document.getElementById("activityList");
-  list.innerHTML = "";
-  if (!state.activities.length) { list.innerHTML = '<p class="muted">No activity yet. Complete a lesson or quiz to see it here.</p>'; return; }
-  state.activities.forEach(item => {
-    const row = document.createElement("div"); row.className = "activity-item";
-    const message = document.createElement("b"); message.textContent = item.message;
-    const date = document.createElement("div"); date.className = "muted"; date.textContent = item.date;
-    row.append(message, date); list.appendChild(row);
+  const client = window.supabase.createClient(
+    config.SUPABASE_URL,
+    config.SUPABASE_PUBLISHABLE_KEY
+  );
+
+  function showStudent(user) {
+    authArea.classList.add("hidden");
+    studentArea.classList.remove("hidden");
+    const name = user.user_metadata?.full_name || "Student";
+    document.getElementById("welcome-name").textContent = `Welcome, ${name}!`;
+    document.getElementById("student-email").textContent = user.email || "";
+  }
+
+  function showAuth() {
+    studentArea.classList.add("hidden");
+    authArea.classList.remove("hidden");
+  }
+
+  loginForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const email = document.getElementById("login-email").value.trim();
+    const password = document.getElementById("login-password").value;
+    showMessage("Logging you in...");
+    const { data, error } = await client.auth.signInWithPassword({ email, password });
+    if (error) return showMessage(error.message, true);
+    showStudent(data.user);
   });
-}
-document.getElementById("levelSelect").addEventListener("change", e => {
-  document.getElementById("greeting").textContent = `Welcome, ${e.target.value} learner! 👋`;
-  document.getElementById("lessonLevel").value = e.target.value;
-  document.querySelector(".lesson-label").textContent = `SAMPLE LESSON · ${e.target.value.toUpperCase()}`;
-});
-document.getElementById("year").textContent = new Date().getFullYear();
-renderLesson(); renderStats();
-if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
-  window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js").catch(() => {}));
-}
+
+  signupForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const fullName = document.getElementById("full-name").value.trim();
+    const email = document.getElementById("signup-email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const password = document.getElementById("signup-password").value;
+    if (!fullName || !phone) return showMessage("Please enter your full name and phone number.", true);
+
+    showMessage("Creating your account...");
+    const { data, error } = await client.auth.signUp({
+      email,
+      password,
+      options: {
+        data: { full_name: fullName, phone_number: phone },
+        emailRedirectTo: window.location.origin
+      }
+    });
+    if (error) return showMessage(error.message, true);
+
+    if (data.session && data.user) {
+      showStudent(data.user);
+    } else {
+      showMessage("Account created. Please check your email and confirm your address before logging in.");
+      setTab("login");
+    }
+  });
+
+  document.getElementById("forgot-password").addEventListener("click", async () => {
+    const email = document.getElementById("login-email").value.trim();
+    if (!email) return showMessage("Enter your email address in the login form first.", true);
+    showMessage("Sending password reset email...");
+    const { error } = await client.auth.resetPasswordForEmail(email, {
+      redirectTo: window.location.origin
+    });
+    if (error) return showMessage(error.message, true);
+    showMessage("If an account exists for that email, a password reset link has been sent.");
+  });
+
+  document.getElementById("logout-button").addEventListener("click", async () => {
+    const { error } = await client.auth.signOut();
+    if (error) return showMessage(error.message, true);
+    showAuth();
+    setTab("login");
+    showMessage("You have logged out.");
+  });
+
+  client.auth.getSession().then(({ data }) => {
+    if (data.session?.user) showStudent(data.session.user);
+  });
+  client.auth.onAuthStateChange((_event, session) => {
+    if (session?.user) showStudent(session.user);
+    else showAuth();
+  });
+})();
