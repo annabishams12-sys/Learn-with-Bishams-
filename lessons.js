@@ -20,7 +20,45 @@ const lessonDetail = document.getElementById("lesson-detail");
 const selectedSubject = document.getElementById("selected-subject");
 const weekGrid = document.getElementById("week-grid");
 const weekStatus = document.getElementById("week-status");
+const languageSelect = document.getElementById("lesson-language");
+const languageSwitch = document.getElementById("switch-language");
+const languageStatus = document.getElementById("language-status");
 
+let preferredLanguage =
+  localStorage.getItem("lessonLanguage") || "english";
+
+let currentLanguage = preferredLanguage;
+
+languageSelect.value = preferredLanguage;
+
+function updateLanguageDisplay() {
+  languageStatus.textContent =
+    currentLanguage === "english"
+      ? "English selected"
+      : "An zaɓi Hausa";
+
+  languageSwitch.textContent =
+    currentLanguage === "english"
+      ? "Switch to Hausa"
+      : "Canza zuwa Turanci";
+}
+
+languageSelect.addEventListener("change", () => {
+  preferredLanguage = languageSelect.value;
+  currentLanguage = preferredLanguage;
+
+  localStorage.setItem("lessonLanguage", preferredLanguage);
+  updateLanguageDisplay();
+});
+
+languageSwitch.addEventListener("click", () => {
+  currentLanguage =
+    currentLanguage === "english" ? "hausa" : "english";
+
+  updateLanguageDisplay();
+});
+
+updateLanguageDisplay();
 document.getElementById("year").textContent =
   new Date().getFullYear();
 
