@@ -289,7 +289,7 @@ const lessons = {
       ]
     }
   }
-};
+}
 
 
 let preferredLanguage = "english";
@@ -300,7 +300,173 @@ try {
 
 if (!["english", "hausa"].includes(preferredLanguage)) {
   preferredLanguage = "english";
-}
+},
+
+  "English Language": {
+    1: {
+      topic: {
+        english: "Greetings and Introducing Myself",
+        hausa: "Gaisuwa da Gabatar da Kai"
+      },
+      objectives: {
+        english: [
+          "Greet people politely.",
+          "Introduce themselves using simple sentences."
+        ],
+        hausa: [
+          "Gaishe da mutane cikin ladabi.",
+          "Gabatar da kansu ta amfani da jimloli masu sauƙi."
+        ]
+      },
+      notes: {
+        english: "Greetings are words we use when meeting people. Examples: Good morning, Good afternoon, Good evening and Hello. We can introduce ourselves by saying: My name is Ada. I am a pupil.",
+        hausa: "Gaisuwa kalmomi ne da muke amfani da su idan muka haɗu da mutane. Misalai: Ina kwana, Ina wuni, Ina yini da Sannu. Za mu iya gabatar da kanmu ta hanyar cewa: Sunana Ada. Ni ɗalibi ne."
+      },
+      activity: {
+        english: "The teacher greets the pupils and asks them to introduce themselves. Pupils practise greeting one another.",
+        hausa: "Malami zai gaishe da ɗalibai ya tambaye su su gabatar da kansu. Ɗalibai za su yi atisayen gaisawa da juna."
+      },
+      classwork: {
+        english: "1. Write two greetings. 2. Complete: My name is ____.",
+        hausa: "1. Rubuta gaisuwa guda biyu. 2. Cika: Sunana ____."
+      },
+      homework: {
+        english: "Practise greeting your parents and introduce yourself to someone at home.",
+        hausa: "Yi atisayen gaishe da iyayenka kuma ka gabatar da kanka ga wani a gida."
+      },
+      quiz: [
+        { english: "What do we say in the morning?", hausa: "Me muke cewa da safe?", options: ["Good morning", "Good night", "Goodbye"], answer: 0 },
+        { english: "Which is a greeting?", hausa: "Wanne ne gaisuwa?", options: ["Table", "Hello", "Book"], answer: 1 },
+        { english: "How do you introduce yourself?", hausa: "Yaya ake gabatar da kai?", options: ["My name is Ada", "Go away", "Sit down"], answer: 0 },
+        { english: "What do we say when leaving?", hausa: "Me muke cewa idan za mu tafi?", options: ["Goodbye", "Good morning", "Welcome"], answer: 0 },
+        { english: "Are greetings important?", hausa: "Shin gaisuwa tana da muhimmanci?", options: ["Yes", "No", "Never"], answer: 0 }
+      ]
+    },
+    2: {
+      topic: {
+        english: "The Alphabet A–F",
+        hausa: "Haruffan A–F"
+      },
+      objectives: {
+        english: [
+          "Recognise letters A–F.",
+          "Pronounce letters A–F.",
+          "Match letters with simple words."
+        ],
+        hausa: [
+          "Gane haruffan A–F.",
+          "Furta haruffan A–F.",
+          "Haɗa haruffa da kalmomi masu sauƙi."
+        ]
+      },
+      notes: {
+        english: "The alphabet is made up of letters. The first six letters are A, B, C, D, E and F. Examples: A for Apple, B for Ball, C for Cat, D for Dog, E for Egg and F for Fish.",
+        hausa: "Haruffan Turanci sun ƙunshi haruffa da dama. Haruffa shida na farko su ne A, B, C, D, E da F. Misalai: A na Apple, B na Ball, C na Cat, D na Dog, E na Egg da F na Fish."
+      },
+      activity: {
+        english: "The teacher displays alphabet cards A–F and pictures. Pupils pronounce the letters and match them with the pictures.",
+        hausa: "Malami zai nuna katunan haruffa A–F da hotuna. Ɗalibai za su furta haruffan su haɗa su da hotunan."
+      },
+      classwork: {
+        english: "1. Write letters A–F. 2. Match A with Apple, B with Ball and C with Cat.",
+        hausa: "1. Rubuta haruffa A–F. 2. Haɗa A da Apple, B da Ball, C da Cat."
+      },
+      homework: {
+        english: "Write letters A–F three times each.",
+        hausa: "Rubuta kowane harafi daga A–F sau uku."
+      },
+      quiz: [
+        { english: "Which letter comes first?", hausa: "Wanne harafi ne na farko?", options: ["A", "B", "C"], answer: 0 },
+        { english: "Which letter comes after B?", hausa: "Wanne harafi ne ke zuwa bayan B?", options: ["A", "C", "D"], answer: 1 },
+        { english: "A is for ____.", hausa: "A na ____.", options: ["Ball", "Apple", "Cat"], answer: 1 },
+        { english: "Which letter begins Dog?", hausa: "Wanne harafi ne ke fara kalmar Dog?", options: ["D", "E", "F"], answer: 0 },
+        { english: "Which letter comes after E?", hausa: "Wanne harafi ne ke zuwa bayan E?", options: ["C", "D", "F"], answer: 2 }
+      ]
+    },
+    3: {
+      topic: {
+        english: "The Alphabet G–L",
+        hausa: "Haruffan G–L"
+      },
+      objectives: {
+        english: [
+          "Recognise letters G–L.",
+          "Pronounce letters G–L.",
+          "Match letters with simple words."
+        ],
+        hausa: [
+          "Gane haruffan G–L.",
+          "Furta haruffan G–L.",
+          "Haɗa haruffa da kalmomi masu sauƙi."
+        ]
+      },
+      notes: {
+        english: "Today we learn six more letters: G, H, I, J, K and L. Examples: G for Goat, H for Hat, I for Ink, J for Jug, K for Kite and L for Lion.",
+        hausa: "A yau za mu koyi wasu haruffa shida: G, H, I, J, K da L. Misalai: G na Goat, H na Hat, I na Ink, J na Jug, K na Kite da L na Lion."
+      },
+      activity: {
+        english: "The teacher shows letters G–L and pictures. Pupils say each letter and name the matching object.",
+        hausa: "Malami zai nuna haruffa G–L da hotuna. Ɗalibai za su faɗi kowane harafi da sunan abin da ya dace da shi."
+      },
+      classwork: {
+        english: "1. Write letters G–L. 2. Match G with Goat, K with Kite and L with Lion.",
+        hausa: "1. Rubuta haruffa G–L. 2. Haɗa G da Goat, K da Kite, L da Lion."
+      },
+      homework: {
+        english: "Write letters G–L three times each.",
+        hausa: "Rubuta kowane harafi daga G–L sau uku."
+      },
+      quiz: [
+        { english: "Which letter comes after G?", hausa: "Wanne harafi ne ke zuwa bayan G?", options: ["F", "H", "I"], answer: 1 },
+        { english: "G is for ____.", hausa: "G na ____.", options: ["Goat", "Ball", "Fish"], answer: 0 },
+        { english: "Which letter begins Kite?", hausa: "Wanne harafi ne ke fara Kite?", options: ["J", "K", "L"], answer: 1 },
+        { english: "Which letter comes before L?", hausa: "Wanne harafi ne ke gaban L?", options: ["J", "K", "M"], answer: 1 },
+        { english: "L is for ____.", hausa: "L na ____.", options: ["Lion", "Apple", "Dog"], answer: 0 }
+      ]
+    },
+    4: {
+      topic: {
+        english: "The Alphabet M–R",
+        hausa: "Haruffan M–R"
+      },
+      objectives: {
+        english: [
+          "Recognise letters M–R.",
+          "Pronounce letters M–R.",
+          "Match letters with simple words."
+        ],
+        hausa: [
+          "Gane haruffan M–R.",
+          "Furta haruffan M–R.",
+          "Haɗa haruffa da kalmomi masu sauƙi."
+        ]
+      },
+      notes: {
+        english: "Today we learn six more letters: M, N, O, P, Q and R. Examples: M for Mango, N for Nest, O for Orange, P for Pen, Q for Queen and R for Rat.",
+        hausa: "A yau za mu koyi wasu haruffa shida: M, N, O, P, Q da R. Misalai: M na Mango, N na Nest, O na Orange, P na Pen, Q na Queen da R na Rat."
+      },
+      activity: {
+        english: "The teacher displays letters M–R and pictures. Pupils pronounce each letter and identify the matching picture.",
+        hausa: "Malami zai nuna haruffa M–R da hotuna. Ɗalibai za su furta kowane harafi su gano hoton da ya dace."
+      },
+      classwork: {
+        english: "1. Write letters M–R. 2. Match M with Mango, P with Pen and R with Rat.",
+        hausa: "1. Rubuta haruffa M–R. 2. Haɗa M da Mango, P da Pen, R da Rat."
+      },
+      homework: {
+        english: "Write letters M–R three times each.",
+        hausa: "Rubuta kowane harafi daga M–R sau uku."
+      },
+      quiz: [
+        { english: "Which letter comes first in this group?", hausa: "Wanne harafi ne na farko a wannan rukuni?", options: ["M", "N", "O"], answer: 0 },
+        { english: "M is for ____.", hausa: "M na ____.", options: ["Pen", "Mango", "Rat"], answer: 1 },
+        { english: "Which letter begins Pen?", hausa: "Wanne harafi ne ke fara Pen?", options: ["O", "P", "Q"], answer: 1 },
+        { english: "Which letter comes after Q?", hausa: "Wanne harafi ne ke zuwa bayan Q?", options: ["P", "R", "S"], answer: 1 },
+        { english: "R is for ____.", hausa: "R na ____.", options: ["Rat", "Cat", "Goat"], answer: 0 }
+      ]
+    }
+  },
+
 
 let currentLanguage = preferredLanguage;
 let activeSubject = "";
