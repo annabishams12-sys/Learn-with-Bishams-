@@ -520,7 +520,7 @@ const lessons = {
       ]
     }
   }
-
+};
 
 let preferredLanguage = "english";
 
