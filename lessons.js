@@ -352,7 +352,8 @@ const lessons = {
         { english: "R is for ____.", hausa: "R na ____.", options: ["Rat", "Cat", "Goat"], answer: 0 }
       ]
     }
-  };
+   }
+};
 
 let preferredLanguage = "english";
 
