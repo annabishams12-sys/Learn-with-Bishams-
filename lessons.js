@@ -286,8 +286,7 @@ const lessons = {
         { english: "What comes before 4?", hausa: "Me ke zuwa kafin 4?", options: ["3", "5", "6"], answer: 0 },
         { english: "How do we write ten?", hausa: "Yaya ake rubuta goma?", options: ["8", "9", "10"], answer: 2 },
         { english: "How many circles should you draw if asked to draw 3?", hausa: "Da'irori nawa za ka zana idan aka ce ka zana 3?", options: ["2", "3", "5"], answer: 1 }
-      ]
-    }
+      ] 
      ]
     }
   },
@@ -454,7 +453,7 @@ const lessons = {
         { english: "R is for ____.", hausa: "R na ____.", options: ["Rat", "Cat", "Goat"], answer: 0 }
       ]
     }
-  },
+  };
 
 let preferredLanguage = "english";
 
