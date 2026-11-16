@@ -288,20 +288,9 @@ const lessons = {
         { english: "How many circles should you draw if asked to draw 3?", hausa: "Da'irori nawa za ka zana idan aka ce ka zana 3?", options: ["2", "3", "5"], answer: 1 }
       ]
     }
-  }
-}
-
-
-let preferredLanguage = "english";
-
-try {
-  preferredLanguage = localStorage.getItem("lessonLanguage") || "english";
-} catch (error) {}
-
-if (!["english", "hausa"].includes(preferredLanguage)) {
-  preferredLanguage = "english";
-},
-
+     ]
+    }
+  },
   "English Language": {
     1: {
       topic: {
@@ -467,7 +456,16 @@ if (!["english", "hausa"].includes(preferredLanguage)) {
     }
   },
 
+let preferredLanguage = "english";
 
+try {
+  preferredLanguage = localStorage.getItem("lessonLanguage") || "english";
+} catch (error) {}
+
+if (!["english", "hausa"].includes(preferredLanguage)) {
+  preferredLanguage = "english";
+},
+          
 let currentLanguage = preferredLanguage;
 let activeSubject = "";
 let activeWeek = 0;
