@@ -352,8 +352,177 @@ const lessons = {
         { english: "R is for ____.", hausa: "R na ____.", options: ["Rat", "Cat", "Goat"], answer: 0 }
       ]
     }
-   }
+   },
 };
+
+
+  "Basic Science": {
+    1: {
+      topic: {
+        english: "Living and Non-living Things",
+        hausa: "Abubuwa Masu Rai da Marasa Rai"
+      },
+      objectives: {
+        english: [
+          "Identify living things.",
+          "Identify non-living things.",
+          "Give examples of living and non-living things."
+        ],
+        hausa: [
+          "Gane abubuwa masu rai.",
+          "Gane abubuwa marasa rai.",
+          "Bayar da misalan abubuwa masu rai da marasa rai."
+        ]
+      },
+      notes: {
+        english: "Living things are things that have life. They grow, breathe and need food and water. Examples are humans, goats, birds and trees. Non-living things do not have life. Examples are stones, chairs, tables and pencils.",
+        hausa: "Abubuwa masu rai suna da rai. Suna girma, suna numfashi kuma suna buƙatar abinci da ruwa. Misalai su ne mutane, awaki, tsuntsaye da bishiyoyi. Abubuwa marasa rai ba su da rai. Misalai su ne duwatsu, kujeru, tebura da fensir."
+      },
+      activity: {
+        english: "The teacher shows pictures of living and non-living things. Pupils identify each one.",
+        hausa: "Malami ya nuna hotunan abubuwa masu rai da marasa rai. Ɗalibai su gane kowanne."
+      },
+      classwork: {
+        english: "1. Mention two living things. 2. Mention two non-living things. 3. Is a goat living or non-living?",
+        hausa: "1. Faɗi abubuwa biyu masu rai. 2. Faɗi abubuwa biyu marasa rai. 3. Akuya tana da rai ko ba ta da rai?"
+      },
+      homework: {
+        english: "Draw two living things and two non-living things.",
+        hausa: "Zana abubuwa biyu masu rai da abubuwa biyu marasa rai."
+      },
+      quiz: [
+        { english: "Which is a living thing?", hausa: "Wanne abu ne mai rai?", options: ["Goat", "Stone", "Chair"], answer: 0 },
+        { english: "Which is non-living?", hausa: "Wanne abu ne marar rai?", options: ["Bird", "Table", "Tree"], answer: 1 },
+        { english: "Do living things grow?", hausa: "Shin abubuwa masu rai suna girma?", options: ["Yes", "No", "Never"], answer: 0 },
+        { english: "Which needs food?", hausa: "Wanne ne yake buƙatar abinci?", options: ["Human", "Stone", "Pencil"], answer: 0 },
+        { english: "Is a tree living?", hausa: "Shin bishiya tana da rai?", options: ["Yes", "No", "Never"], answer: 0 }
+      ]
+    },
+    2: {
+      topic: {
+        english: "Parts of the Human Body",
+        hausa: "Sassan Jikin Dan Adam"
+      },
+      objectives: {
+        english: [
+          "Name some parts of the human body.",
+          "Identify parts of the head.",
+          "State the uses of some body parts."
+        ],
+        hausa: [
+          "Faɗi wasu sassan jikin mutum.",
+          "Gane sassan kai.",
+          "Fadi amfanin wasu sassan jiki."
+        ]
+      },
+      notes: {
+        english: "The human body has different parts. These include the head, eyes, nose, ears, mouth, hands, legs and stomach. We use our hands to hold things and our legs to walk.",
+        hausa: "Jikin mutum yana da sassa daban-daban. Waɗannan sun haɗa da kai, idanu, hanci, kunnuwa, baki, hannuwa, ƙafafu da ciki. Muna amfani da hannuwa wajen riƙe abubuwa, ƙafafu kuma wajen tafiya."
+      },
+      activity: {
+        english: "The teacher points to different body parts. Pupils name and touch each part.",
+        hausa: "Malami ya nuna sassan jiki daban-daban. Ɗalibai su faɗi sunayensu kuma su taɓa kowanne."
+      },
+      classwork: {
+        english: "1. Name three parts of the body. 2. What do we use to walk? 3. What do we use to hold things?",
+        hausa: "1. Faɗi sassan jiki guda uku. 2. Me muke amfani da shi wajen tafiya? 3. Me muke amfani da shi wajen riƙe abubuwa?"
+      },
+      homework: {
+        english: "Draw a human body and label the head, hands and legs.",
+        hausa: "Zana jikin mutum sannan ka rubuta sunayen kai, hannuwa da ƙafafu."
+      },
+      quiz: [
+        { english: "Which is a part of the body?", hausa: "Wanne sashe ne na jiki?", options: ["Head", "Chair", "Stone"], answer: 0 },
+        { english: "What do we use to walk?", hausa: "Me muke amfani da shi wajen tafiya?", options: ["Legs", "Ears", "Eyes"], answer: 0 },
+        { english: "Where are our eyes?", hausa: "A ina idanu suke?", options: ["Head", "Legs", "Hands"], answer: 0 },
+        { english: "What do we use to hold things?", hausa: "Me muke amfani da shi wajen riƙe abubuwa?", options: ["Hands", "Nose", "Ears"], answer: 0 },
+        { english: "How many hands do most people have?", hausa: "Hannu nawa ne yawancin mutane suke da su?", options: ["One", "Two", "Four"], answer: 1 }
+      ]
+    },
+    3: {
+      topic: {
+        english: "The Five Sense Organs",
+        hausa: "Gabobin Ji Guda Biyar"
+      },
+      objectives: {
+        english: [
+          "Name the five sense organs.",
+          "State the uses of the sense organs.",
+          "Identify the sense organs."
+        ],
+        hausa: [
+          "Faɗi sunayen gabobin ji guda biyar.",
+          "Fadi amfanin gabobin ji.",
+          "Gane gabobin ji."
+        ]
+      },
+      notes: {
+        english: "We have five sense organs. They are the eyes, ears, nose, tongue and skin. We use our eyes to see, ears to hear, nose to smell, tongue to taste and skin to feel.",
+        hausa: "Muna da gabobin ji guda biyar. Su ne idanu, kunnuwa, hanci, harshe da fata. Muna amfani da idanu wajen gani, kunnuwa wajen ji, hanci wajen ƙamshi, harshe wajen ɗanɗano, fata kuma wajen taɓawa."
+      },
+      activity: {
+        english: "The teacher asks pupils to look, listen, smell a safe item and touch different objects.",
+        hausa: "Malami ya umarci ɗalibai su kalla, su saurara, su ji ƙamshin abu mai aminci kuma su taɓa abubuwa daban-daban."
+      },
+      classwork: {
+        english: "1. Name two sense organs. 2. Which organ helps us to see? 3. Which organ helps us to hear?",
+        hausa: "1. Faɗi gabobin ji guda biyu. 2. Wane gaɓa ne ke taimaka mana wajen gani? 3. Wane gaɓa ne ke taimaka mana wajen ji?"
+      },
+      homework: {
+        english: "Draw and label any three sense organs.",
+        hausa: "Zana kuma ka rubuta sunayen gabobin ji guda uku."
+      },
+      quiz: [
+        { english: "Which organ helps us to see?", hausa: "Wane gaɓa ne ke taimaka mana wajen gani?", options: ["Eyes", "Ears", "Nose"], answer: 0 },
+        { english: "Which organ helps us to hear?", hausa: "Wane gaɓa ne ke taimaka mana wajen ji?", options: ["Tongue", "Ears", "Skin"], answer: 1 },
+        { english: "Which organ helps us to smell?", hausa: "Wane gaɓa ne ke taimaka mana wajen jin ƙamshi?", options: ["Nose", "Eyes", "Hands"], answer: 0 },
+        { english: "Which organ helps us to taste?", hausa: "Wane gaɓa ne ke taimaka mana wajen ɗanɗano?", options: ["Tongue", "Ears", "Legs"], answer: 0 },
+        { english: "Which organ helps us to feel?", hausa: "Wane gaɓa ne ke taimaka mana wajen ji ta taɓawa?", options: ["Skin", "Nose", "Eyes"], answer: 0 }
+      ]
+    },
+    4: {
+      topic: {
+        english: "Parts of a Plant",
+        hausa: "Sassan Tsiro"
+      },
+      objectives: {
+        english: [
+          "Identify the parts of a plant.",
+          "Name the main parts of a plant.",
+          "State the uses of some plant parts."
+        ],
+        hausa: [
+          "Gane sassan tsiro.",
+          "Faɗi manyan sassan tsiro.",
+          "Fadi amfanin wasu sassan tsiro."
+        ]
+      },
+      notes: {
+        english: "A plant is a living thing. The main parts of a plant are the roots, stem, leaves and flowers. Roots hold the plant in the soil. The stem supports the plant. Leaves help the plant make food. Flowers can develop into fruits.",
+        hausa: "Tsiro abu ne mai rai. Manyan sassan tsiro su ne saiwa, kara, ganye da furanni. Saiwa tana riƙe tsiro a ƙasa. Kara tana tallafa wa tsiro. Ganye yana taimaka wa tsiro wajen samar da abinci. Furanni na iya zama 'ya'yan itace."
+      },
+      activity: {
+        english: "The teacher shows a real plant or picture. Pupils point to its roots, stem, leaves and flowers.",
+        hausa: "Malami ya nuna ainihin tsiro ko hotonsa. Ɗalibai su nuna saiwa, kara, ganye da furanni."
+      },
+      classwork: {
+        english: "1. Name three parts of a plant. 2. Which part holds a plant in the soil? 3. Which part supports the plant?",
+        hausa: "1. Faɗi sassan tsiro guda uku. 2. Wane sashe ne ke riƙe tsiro a ƙasa? 3. Wane sashe ne ke tallafa wa tsiro?"
+      },
+      homework: {
+        english: "Draw a plant and label its roots, stem and leaves.",
+        hausa: "Zana tsiro sannan ka rubuta sunayen saiwa, kara da ganye."
+      },
+      quiz: [
+        { english: "Which is a part of a plant?", hausa: "Wanne sashe ne na tsiro?", options: ["Root", "Shoe", "Cup"], answer: 0 },
+        { english: "Which part holds the plant in the soil?", hausa: "Wane sashe ne ke riƙe tsiro a ƙasa?", options: ["Flower", "Root", "Leaf"], answer: 1 },
+        { english: "Which part supports the plant?", hausa: "Wane sashe ne ke tallafa wa tsiro?", options: ["Stem", "Fruit", "Flower"], answer: 0 },
+        { english: "Which part is usually green?", hausa: "Wane sashe ne yawanci yake kore?", options: ["Leaf", "Root", "Stone"], answer: 0 },
+        { english: "Is a plant a living thing?", hausa: "Shin tsiro abu ne mai rai?", options: ["Yes", "No", "Never"], answer: 0 }
+      ]
+    }
+  }
+
 
 let preferredLanguage = "english";
 
