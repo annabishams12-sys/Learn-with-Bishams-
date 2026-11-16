@@ -287,9 +287,7 @@ const lessons = {
         { english: "How do we write ten?", hausa: "Yaya ake rubuta goma?", options: ["8", "9", "10"], answer: 2 },
         { english: "How many circles should you draw if asked to draw 3?", hausa: "Da'irori nawa za ka zana idan aka ce ka zana 3?", options: ["2", "3", "5"], answer: 1 }
       ] 
-     ]
     }
-  },
   "English Language": {
     1: {
       topic: {
@@ -463,7 +461,9 @@ try {
 
 if (!["english", "hausa"].includes(preferredLanguage)) {
   preferredLanguage = "english";
-},
+}.
+
+let currentLanguage = preferredLanguage;
           
 let currentLanguage = preferredLanguage;
 let activeSubject = "";
