@@ -353,8 +353,6 @@ const lessons = {
       ]
     }
    },
-};
-
 
   "Basic Science": {
     1: {
