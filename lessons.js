@@ -1436,7 +1436,12 @@ const lessons = {
         { english: "We should not play with ____.", hausa: "Bai kamata mu yi wasa da ____ ba.", options: ["Fire", "Toys", "Balls"], answer: 0 },
         { english: "Who should we tell about danger?", hausa: "Wa ya kamata mu sanar game da haɗari?", options: ["A trusted adult", "Nobody", "A small child"], answer: 0 },
         { english: "We should walk ____.", hausa: "Ya kamata mu yi tafiya ____.", options: ["Carefully", "Blindly", "While pushing others"], answer: 0 },
-        { english: "We should never touch unknown ____.", hausa: "Kada mu 
+        { english: "We should never touch unknown ____.", hausa: "Kada mu taɓa ____ da ba mu sani ba.", options: ["Chemicals or medicines", "Exercise books", "Clothes"], answer: 0 }
+      ]
+    }
+  }
+};
+
 
 let preferredLanguage = "english";
 
