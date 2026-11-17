@@ -1131,9 +1131,312 @@ const lessons = {
         { english: "Which part is usually green?", hausa: "Wane sashe ne yawanci yake kore?", options: ["Leaf", "Root", "Stone"], answer: 0 },
         { english: "Is a plant a living thing?", hausa: "Shin tsiro abu ne mai rai?", options: ["Yes", "No", "Never"], answer: 0 }
       ]
-    }
-  }
-};
+    },
+
+    
+    5: {
+      topic: {
+        english: "Animals and Their Homes",
+        hausa: "Dabbobi da Gidajensu"
+      },
+      objectives: {
+        english: ["Identify common animals.", "Name places where animals live.", "Give examples of animal homes."],
+        hausa: ["Gane dabbobi na yau da kullum.", "Faɗi wuraren da dabbobi suke zama.", "Bayar da misalan gidajen dabbobi."]
+      },
+      notes: {
+        english: "Animals are living things. Some animals live in houses, nests, holes, water or forests. Dogs live in kennels, birds live in nests and fish live in water.",
+        hausa: "Dabbobi abubuwa ne masu rai. Wasu dabbobi suna zama a gidaje, sheƙuna, ramuka, ruwa ko dazuzzuka. Kare yana zama a gidan kare, tsuntsu a sheƙa, kifi kuma a ruwa."
+      },
+      activity: {
+        english: "The teacher shows pictures of animals and their homes. Pupils match each animal to its home.",
+        hausa: "Malami ya nuna hotunan dabbobi da gidajensu. Ɗalibai su haɗa kowace dabba da gidanta."
+      },
+      classwork: {
+        english: "1. Name two animals. 2. Where does a bird live? 3. Where do fish live?",
+        hausa: "1. Faɗi sunayen dabbobi biyu. 2. Ina tsuntsu yake zama? 3. Ina kifaye suke zama?"
+      },
+      homework: {
+        english: "Draw two animals and their homes.",
+        hausa: "Zana dabbobi biyu da gidajensu."
+      },
+      quiz: [
+        { english: "Where does a bird live?", hausa: "Ina tsuntsu yake zama?", options: ["Nest", "Pot", "Bag"], answer: 0 },
+        { english: "Which animal lives in water?", hausa: "Wace dabba ce take zama a ruwa?", options: ["Goat", "Fish", "Dog"], answer: 1 },
+        { english: "A dog is a ____.", hausa: "Kare ____ ne.", options: ["Plant", "Animal", "Stone"], answer: 1 },
+        { english: "Which is an animal?", hausa: "Wanne ne dabba?", options: ["Cat", "Chair", "Cup"], answer: 0 },
+        { english: "Where can a rabbit live?", hausa: "Ina zomo zai iya zama?", options: ["Hole", "Sky", "Book"], answer: 0 }
+      ]
+    },
+
+    6: {
+      topic: {
+        english: "Uses of Plants",
+        hausa: "Amfanin Tsirrai"
+      },
+      objectives: {
+        english: ["State the uses of plants.", "Identify useful plants.", "Explain why plants are important."],
+        hausa: ["Faɗi amfanin tsirrai.", "Gane tsirrai masu amfani.", "Bayyana muhimmancin tsirrai."]
+      },
+      notes: {
+        english: "Plants are useful to people and animals. We get food, medicine, shade and wood from plants. Trees also provide shelter for some animals.",
+        hausa: "Tsirrai suna da amfani ga mutane da dabbobi. Muna samun abinci, magani, inuwa da itace daga tsirrai. Bishiyoyi kuma suna ba wasu dabbobi mafaka."
+      },
+      activity: {
+        english: "The teacher shows pictures of useful plants. Pupils mention what we get from them.",
+        hausa: "Malami ya nuna hotunan tsirrai masu amfani. Ɗalibai su faɗi abin da ake samu daga gare su."
+      },
+      classwork: {
+        english: "1. Mention two uses of plants. 2. Name one plant we eat. 3. What do trees provide on a sunny day?",
+        hausa: "1. Faɗi amfanin tsirrai guda biyu. 2. Faɗi tsiro ɗaya da muke ci. 3. Me bishiyoyi suke bayarwa a rana mai zafi?"
+      },
+      homework: {
+        english: "Draw a useful plant and write two things we get from plants.",
+        hausa: "Zana tsiro mai amfani sannan ka rubuta abubuwa biyu da muke samu daga tsirrai."
+      },
+      quiz: [
+        { english: "Which do we get from plants?", hausa: "Wanne muke samu daga tsirrai?", options: ["Food", "Plastic", "Glass"], answer: 0 },
+        { english: "Trees provide us with ____.", hausa: "Bishiyoyi suna ba mu ____.", options: ["Shade", "Noise", "Smoke"], answer: 0 },
+        { english: "Which is a plant?", hausa: "Wanne ne tsiro?", options: ["Mango tree", "Stone", "Chair"], answer: 0 },
+        { english: "Plants can be used for ____.", hausa: "Ana amfani da tsirrai wajen ____.", options: ["Medicine", "Making stones", "Making water"], answer: 0 },
+        { english: "Plants are useful to ____.", hausa: "Tsirrai suna da amfani ga ____.", options: ["People and animals", "Stones only", "Chairs only"], answer: 0 }
+      ]
+    },
+
+    7: {
+      topic: {
+        english: "Water and Its Uses",
+        hausa: "Ruwa da Amfaninsa"
+      },
+      objectives: {
+        english: ["Identify sources of water.", "State the uses of water.", "Understand the importance of clean water."],
+        hausa: ["Gane hanyoyin samun ruwa.", "Faɗi amfanin ruwa.", "Fahimci muhimmancin ruwa mai tsafta."]
+      },
+      notes: {
+        english: "Water is important to all living things. We get water from rain, rivers, wells and taps. We use water for drinking, cooking, bathing and washing. We should drink clean and safe water.",
+        hausa: "Ruwa yana da muhimmanci ga dukkan abubuwa masu rai. Muna samun ruwa daga ruwan sama, koguna, rijiyoyi da famfo. Muna amfani da ruwa wajen sha, girki, wanka da wanki. Ya kamata mu sha ruwa mai tsafta da aminci."
+      },
+      activity: {
+        english: "The teacher shows clean water and pictures of water sources. Pupils name the sources.",
+        hausa: "Malami ya nuna ruwa mai tsafta da hotunan wuraren samun ruwa. Ɗalibai su faɗi sunayensu."
+      },
+      classwork: {
+        english: "1. Mention two sources of water. 2. State two uses of water. 3. Why should we drink clean water?",
+        hausa: "1. Faɗi hanyoyin samun ruwa guda biyu. 2. Faɗi amfanin ruwa guda biyu. 3. Me ya sa ya kamata mu sha ruwa mai tsafta?"
+      },
+      homework: {
+        english: "Draw two sources of water.",
+        hausa: "Zana hanyoyin samun ruwa guda biyu."
+      },
+      quiz: [
+        { english: "Which is a source of water?", hausa: "Wanne ne hanyar samun ruwa?", options: ["River", "Chair", "Book"], answer: 0 },
+        { english: "We use water for ____.", hausa: "Muna amfani da ruwa wajen ____.", options: ["Drinking", "Writing", "Singing"], answer: 0 },
+        { english: "Which water is safe to drink?", hausa: "Wane ruwa ne yake da aminci a sha?", options: ["Clean water", "Dirty water", "Waste water"], answer: 0 },
+        { english: "Rain gives us ____.", hausa: "Ruwan sama yana ba mu ____.", options: ["Water", "Sand", "Fire"], answer: 0 },
+        { english: "Water is important to ____.", hausa: "Ruwa yana da muhimmanci ga ____.", options: ["Living things", "Tables only", "Stones only"], answer: 0 }
+      ]
+    },
+
+    8: {
+      topic: {
+        english: "Air Around Us",
+        hausa: "Iskar da Ke Kewaye da Mu"
+      },
+      objectives: {
+        english: ["Know that air is around us.", "State the importance of air.", "Identify things that move with air."],
+        hausa: ["Sanin cewa iska tana kewaye da mu.", "Faɗi muhimmancin iska.", "Gane abubuwan da iska take motsawa."]
+      },
+      notes: {
+        english: "Air is all around us. We cannot usually see air, but we can feel it when it blows. People and animals need air to breathe. Moving air is called wind.",
+        hausa: "Iska tana kewaye da mu. Ba kasafai muke ganin iska ba, amma muna iya jin ta idan tana kadawa. Mutane da dabbobi suna buƙatar iska domin numfashi. Iskar da take motsi ana kiranta iska mai kadawa."
+      },
+      activity: {
+        english: "The teacher uses a hand fan to show moving air. Pupils feel the air.",
+        hausa: "Malami ya yi amfani da fanka ta hannu domin nuna iska mai motsi. Ɗalibai su ji iskar."
+      },
+      classwork: {
+        english: "1. What is air? 2. Can we usually see air? 3. What do we use air for?",
+        hausa: "1. Mene ne iska? 2. Shin muna iya ganin iska? 3. Me muke amfani da iska wajen yi?"
+      },
+      homework: {
+        english: "Draw a fan and a kite. Write how air helps them.",
+        hausa: "Zana fanka da kumurci. Rubuta yadda iska take taimaka musu."
+      },
+      quiz: [
+        { english: "Air is ____ us.", hausa: "Iska tana ____ da mu.", options: ["Around", "Inside stones", "Under books"], answer: 0 },
+        { english: "Moving air is called ____.", hausa: "Iskar da take motsi ana kiranta ____.", options: ["Wind", "Water", "Fire"], answer: 0 },
+        { english: "We need air to ____.", hausa: "Muna buƙatar iska domin ____.", options: ["Breathe", "Eat stones", "Sleep standing"], answer: 0 },
+        { english: "Which can move with wind?", hausa: "Wanne iska za ta iya motsawa?", options: ["Kite", "Rock", "Building"], answer: 0 },
+        { english: "Can we usually see air?", hausa: "Shin muna iya ganin iska?", options: ["No", "Yes, always", "Only at night"], answer: 0 }
+      ]
+    },
+
+    9: {
+      topic: {
+        english: "Weather",
+        hausa: "Yanayin Jiki"
+      },
+      objectives: {
+        english: ["Describe different types of weather.", "Identify sunny and rainy weather.", "State how weather affects our activities."],
+        hausa: ["Bayyana nau'o'in yanayi daban-daban.", "Gane yanayin rana da ruwan sama.", "Faɗi yadda yanayi yake shafar ayyukanmu."]
+      },
+      notes: {
+        english: "Weather is the condition of the air around us at a particular time. It can be sunny, rainy, cloudy or windy. We wear light clothes in hot weather and use umbrellas when it rains.",
+        hausa: "Yanayi shi ne yadda iskar da ke kewaye da mu take a wani lokaci. Yanayi na iya zama na rana, ruwan sama, gajimare ko iska. Muna sanya tufafi masu sauƙi idan zafi ya yi, kuma muna amfani da laima idan ana ruwan sama."
+      },
+      activity: {
+        english: "Pupils look outside and describe the weather. The teacher shows pictures of different weather conditions.",
+        hausa: "Ɗalibai su duba waje su bayyana yanayin. Malami ya nuna hotunan yanayi daban-daban."
+      },
+      classwork: {
+        english: "1. Mention two types of weather. 2. What do we use when it rains? 3. What is a sunny day like?",
+        hausa: "1. Faɗi nau'o'in yanayi guda biyu. 2. Me muke amfani da shi idan ana ruwan sama? 3. Yaya rana take idan yanayi ya yi haske?"
+      },
+      homework: {
+        english: "Draw a sunny day and a rainy day.",
+        hausa: "Zana ranar rana da ranar ruwan sama."
+      },
+      quiz: [
+        { english: "Which is a type of weather?", hausa: "Wanne ne nau'in yanayi?", options: ["Rainy", "Chair", "Pencil"], answer: 0 },
+        { english: "What do we use when it rains?", hausa: "Me muke amfani da shi idan ana ruwan sama?", options: ["Umbrella", "Spoon", "Plate"], answer: 0 },
+        { english: "The sun gives us ____.", hausa: "Rana tana ba mu ____.", options: ["Light and heat", "Books", "Food directly"], answer: 0 },
+        { english: "Dark clouds may bring ____.", hausa: "Gajimare masu duhu na iya kawo ____.", options: ["Rain", "Books", "Stones"], answer: 0 },
+        { english: "Wind is moving ____.", hausa: "Iska mai kadawa ita ce ____ mai motsi.", options: ["Air", "Soil", "Water only"], answer: 0 }
+      ]
+    },
+
+    10: {
+      topic: {
+        english: "Sources of Light",
+        hausa: "Hanyoyin Samun Haske"
+      },
+      objectives: {
+        english: ["Identify sources of light.", "Name natural and man-made sources of light.", "Explain why light is important."],
+        hausa: ["Gane hanyoyin samun haske.", "Faɗi hanyoyin haske na halitta da na mutum.", "Bayyana muhimmancin haske."]
+      },
+      notes: {
+        english: "Light helps us to see things. The sun is a natural source of light. Other sources include stars, electric bulbs, lamps and torches. We should never look directly at the sun.",
+        hausa: "Haske yana taimaka mana wajen ganin abubuwa. Rana hanya ce ta halitta ta samun haske. Sauran hanyoyin sun haɗa da taurari, fitilun lantarki, fitilu da tocila. Kada mu kalli rana kai tsaye."
+      },
+      activity: {
+        english: "The teacher shows pictures of the sun, bulb and torch. Pupils identify each source of light.",
+        hausa: "Malami ya nuna hotunan rana, fitilar lantarki da tocila. Ɗalibai su gane kowace hanyar haske."
+      },
+      classwork: {
+        english: "1. Mention two sources of light. 2. What does light help us to do? 3. Name one natural source of light.",
+        hausa: "1. Faɗi hanyoyin haske guda biyu. 2. Me haske yake taimaka mana mu yi? 3. Faɗi hanyar haske ta halitta guda ɗaya."
+      },
+      homework: {
+        english: "Draw two sources of light.",
+        hausa: "Zana hanyoyin samun haske guda biyu."
+      },
+      quiz: [
+        { english: "Which is a natural source of light?", hausa: "Wanne ne hanyar haske ta halitta?", options: ["Sun", "Bulb", "Torch"], answer: 0 },
+        { english: "Light helps us to ____.", hausa: "Haske yana taimaka mana wajen ____.", options: ["See", "Smell", "Taste"], answer: 0 },
+        { english: "Which uses electricity?", hausa: "Wanne ne yake amfani da lantarki?", options: ["Electric bulb", "Sun", "Star"], answer: 0 },
+        { english: "We should not look directly at the ____.", hausa: "Bai kamata mu kalli ____ kai tsaye ba.", options: ["Sun", "Book", "Chair"], answer: 0 },
+        { english: "Which is another source of light?", hausa: "Wanne ne wata hanyar haske?", options: ["Torch", "Stone", "Water"], answer: 0 }
+      ]
+    },
+
+    11: {
+      topic: {
+        english: "Sound",
+        hausa: "Sauti"
+      },
+      objectives: {
+        english: ["Identify sources of sound.", "Know that we hear with our ears.", "Distinguish loud and soft sounds."],
+        hausa: ["Gane hanyoyin samun sauti.", "Sanin cewa muna ji da kunnuwa.", "Bambanta sauti mai ƙarfi da mai laushi."]
+      },
+      notes: {
+        english: "Sound is what we hear. We hear sounds with our ears. Sounds can be loud or soft. Examples of sound sources are bells, drums, voices and radios.",
+        hausa: "Sauti shi ne abin da muke ji. Muna jin sauti da kunnuwanmu. Sauti na iya zama mai ƙarfi ko mai laushi. Misalan hanyoyin samun sauti su ne ƙararrawa, ganga, murya da rediyo."
+      },
+      activity: {
+        english: "The teacher makes gentle sounds using a bell and asks pupils to identify them.",
+        hausa: "Malami ya yi sautuka masu laushi da ƙararrawa sannan ya tambayi ɗalibai su gane su."
+      },
+      classwork: {
+        english: "1. Which organ helps us to hear? 2. Mention two sources of sound. 3. Give one example of a loud sound.",
+        hausa: "1. Wane gaɓa ne yake taimaka mana wajen ji? 2. Faɗi hanyoyin samun sauti guda biyu. 3. Bayar da misalin sauti mai ƙarfi guda ɗaya."
+      },
+      homework: {
+        english: "Write three things that produce sound.",
+        hausa: "Rubuta abubuwa uku da suke samar da sauti."
+      },
+      quiz: [
+        { english: "We hear with our ____.", hausa: "Muna ji da ____.", options: ["Ears", "Eyes", "Nose"], answer: 0 },
+        { english: "Which produces sound?", hausa: "Wanne ne yake samar da sauti?", options: ["Bell", "Stone", "Water in a cup"], answer: 0 },
+        { english: "Sound can be ____.", hausa: "Sauti na iya zama ____.", options: ["Loud or soft", "Only blue", "Only sweet"], answer: 0 },
+        { english: "Which is a musical instrument?", hausa: "Wanne ne kayan kiɗa?", options: ["Drum", "Chair", "Plate"], answer: 0 },
+        { english: "A radio produces ____.", hausa: "Rediyo yana samar da ____.", options: ["Sound", "Roots", "Leaves"], answer: 0 }
+      ]
+    },
+
+    12: {
+      topic: {
+        english: "Personal Hygiene",
+        hausa: "Tsaftar Jiki"
+      },
+      objectives: {
+        english: ["Explain personal hygiene.", "Mention good hygiene practices.", "State the importance of keeping clean."],
+        hausa: ["Bayyana tsaftar jiki.", "Faɗi hanyoyin kula da tsafta.", "Faɗi muhimmancin kasancewa da tsafta."]
+      },
+      notes: {
+        english: "Personal hygiene means keeping our bodies clean. We should bathe regularly, brush our teeth, wash our hands with soap, wear clean clothes and keep our nails short. Good hygiene helps prevent sickness.",
+        hausa: "Tsaftar jiki tana nufin kiyaye tsabtar jikinmu. Ya kamata mu yi wanka akai-akai, mu goge haƙora, mu wanke hannuwa da sabulu, mu sanya tufafi masu tsafta kuma mu rage farce. Tsafta tana taimakawa wajen hana cututtuka."
+      },
+      activity: {
+        english: "The teacher demonstrates proper handwashing. Pupils practise the steps.",
+        hausa: "Malami ya nuna yadda ake wanke hannu da kyau. Ɗalibai su yi atisayen matakan."
+      },
+      classwork: {
+        english: "1. What is personal hygiene? 2. Mention two ways to keep clean. 3. Why should we wash our hands?",
+        hausa: "1. Mene ne tsaftar jiki? 2. Faɗi hanyoyi biyu na kiyaye tsafta. 3. Me ya sa ya kamata mu wanke hannuwanmu?"
+      },
+      homework: {
+        english: "Write three ways you keep your body clean.",
+        hausa: "Rubuta hanyoyi uku da kake amfani da su wajen kiyaye tsaftar jikinka."
+      },
+      quiz: [
+        { english: "Personal hygiene means keeping our body ____.", hausa: "Tsaftar jiki tana nufin kiyaye jikinmu ____.", options: ["Clean", "Dirty", "Wet always"], answer: 0 },
+        { english: "What should we use to wash our hands?", hausa: "Me ya kamata mu yi amfani da shi wajen wanke hannu?", options: ["Soap and water", "Sand only", "Oil"], answer: 0 },
+        { english: "We brush our ____.", hausa: "Muna goge ____.", options: ["Teeth", "Shoes", "Books"], answer: 0 },
+        { english: "Clean clothes help us to stay ____.", hausa: "Tufafi masu tsafta suna taimaka mana mu kasance ____.", options: ["Clean", "Dirty", "Hungry"], answer: 0 },
+        { english: "Good hygiene helps prevent ____.", hausa: "Tsafta tana taimakawa wajen hana ____.", options: ["Sickness", "Reading", "Walking"], answer: 0 }
+      ]
+    },
+
+    13: {
+      topic: {
+        english: "Safety at Home and School",
+        hausa: "Kariya a Gida da Makaranta"
+      },
+      objectives: {
+        english: ["Identify common dangers at home and school.", "Mention simple safety rules.", "Explain how to avoid accidents."],
+        hausa: ["Gane haɗurra a gida da makaranta.", "Faɗi ƙa'idojin kariya masu sauƙi.", "Bayyana yadda ake guje wa haɗari."]
+      },
+      notes: {
+        english: "Safety means protecting ourselves from danger. We should not play with fire, sharp objects or electrical sockets. We should walk carefully, keep floors dry and tell an adult when we see danger. Never touch unknown chemicals or medicines.",
+        hausa: "Kariya tana nufin kare kanmu daga haɗari. Bai kamata mu yi wasa da wuta, abubuwa masu kaifi ko guraben lantarki ba. Ya kamata mu yi tafiya a hankali, mu busar da wuraren da suka jike kuma mu sanar da babba idan mun ga haɗari. Kada mu taɓa sinadarai ko magungunan da ba mu sani ba."
+      },
+      activity: {
+        english: "The teacher shows pictures of safe and unsafe actions. Pupils identify the safe actions.",
+        hausa: "Malami ya nuna hotunan ayyuka masu aminci da marasa aminci. Ɗalibai su gane ayyukan da suke da aminci."
+      },
+      classwork: {
+        english: "1. What is safety? 2. Mention two things we should not play with. 3. Who should we tell when we see danger?",
+        hausa: "1. Mene ne kariya? 2. Faɗi abubuwa biyu da bai kamata mu yi wasa da su ba. 3. Wa ya kamata mu sanar idan mun ga haɗari?"
+      },
+      homework: {
+        english: "Write three safety rules you follow at home or school.",
+        hausa: "Rubuta ƙa'idojin kariya guda uku da kake bi a gida ko makaranta."
+      },
+      quiz: [
+        { english: "Safety means protecting ourselves from ____.", hausa: "Kariya tana nufin kare kanmu daga ____.", options: ["Danger", "Books", "Food"], answer: 0 },
+        { english: "We should not play with ____.", hausa: "Bai kamata mu yi wasa da ____ ba.", options: ["Fire", "Toys", "Balls"], answer: 0 },
+        { english: "Who should we tell about danger?", hausa: "Wa ya kamata mu sanar game da haɗari?", options: ["A trusted adult", "Nobody", "A small child"], answer: 0 },
+        { english: "We should walk ____.", hausa: "Ya kamata mu yi tafiya ____.", options: ["Carefully", "Blindly", "While pushing others"], answer: 0 },
+        { english: "We should never touch unknown ____.", hausa: "Kada mu 
 
 let preferredLanguage = "english";
 
