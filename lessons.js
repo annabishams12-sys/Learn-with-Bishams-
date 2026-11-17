@@ -184,8 +184,7 @@ const lessons = {
         { english: "How many circles should you draw if asked to draw 3?", hausa: "Da'irori nawa za ka zana idan aka ce ka zana 3?", options: ["2", "3", "5"], answer: 1 }
       
       ]
-  
-  }
+    },
   
     5: {
       topic: {
