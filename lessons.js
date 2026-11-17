@@ -184,10 +184,8 @@ const lessons = {
         { english: "How many circles should you draw if asked to draw 3?", hausa: "Da'irori nawa za ka zana idan aka ce ka zana 3?", options: ["2", "3", "5"], answer: 1 }
       
       ]
-   
-    }
   
-  },
+  }
   
     5: {
       topic: {
@@ -493,9 +491,9 @@ const lessons = {
         { english: "Which is smaller: 2 or 5?", hausa: "Wanne ya fi ƙanƙanta: 2 ko 5?", options: ["2", "5", "Both"], answer: 0 },
         { english: "What is 4 + 1?", hausa: "Nawa ne 4 + 1?", options: ["4", "5", "6"], answer: 1 }
       ]
-    },
-          
-  
+    },   
+   },
+      
   "English Language": {
     1: {
       topic: {
@@ -969,8 +967,8 @@ const lessons = {
         { english: "Which mark ends a question?", hausa: "Wace alama ce ke ƙare tambaya?", options: [".", "?", ","], answer: 1 }
       ]
     },
-
-  
+  },
+      
   "Basic Science": {
     1: {
       topic: {
