@@ -613,8 +613,9 @@ const lessons = {
         { english: "Which letter begins Kite?", hausa: "Wanne harafi ne ke fara Kite?", options: ["J", "K", "L"], answer: 1 },
         { english: "Which letter comes before L?", hausa: "Wanne harafi ne ke gaban L?", options: ["J", "K", "M"], answer: 1 },
         { english: "L is for ____.", hausa: "L na ____.", options: ["Lion", "Apple", "Dog"], answer: 0 }
-      ]
-    },
+
+     ]
+    },  
     4: {
       topic: {
         english: "The Alphabet M–R",
@@ -655,10 +656,8 @@ const lessons = {
         { english: "Which letter comes after Q?", hausa: "Wanne harafi ne ke zuwa bayan Q?", options: ["P", "R", "S"], answer: 1 },
         { english: "R is for ____.", hausa: "R na ____.", options: ["Rat", "Cat", "Goat"], answer: 0 }
       ]
-    }
    },
 
-  
     5: {
       topic: {
         english: "The Alphabet S–Z",
